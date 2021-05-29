@@ -1654,11 +1654,11 @@ contract TokenineERC20  is ERC20Mintable, ERC20Burnable, Ownable, Roles, ERC20Pa
         return true;
     }
 
-    function stop() public {
+    function stop() public onlyOwner {
         super._pause();
     }
 
-    function start() public {
+    function start() public onlyOwner {
         super._unpause();
     }
 
